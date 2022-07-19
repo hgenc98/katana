@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General Settings - Katana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="z-index: 99;">
+            <div class="container-fluid justify-content-start"><a href="/"
+                    class="router-link-active router-link-exact-active navbar-brand font-monospace p-2 px-4"
+                    aria-current="page">Katana</a><button class="navbar-toggler me-2" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbar">
+                    <div class="navbar-nav"><a href="/sales"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-shop"></i> SELL </a><a href="/manufacturingorders"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-thumbs-up"></i> MAKE </a><a href="/purchases"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-basket-shopping"></i> BUY </a><a href="/inventory"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-cube"></i> STOCK </a><a href="/products"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-star"></i> ITEMS </a><a href="/contacts"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-user-group"></i> CONTACTS </a><a href="/settings"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-gear"></i> SETTINGS </a></div>
+                </div>
+                <div id="navbarAddBtn" class="dropdown ms-lg-0 ms-sm-auto"><button
+                        class="btn border-0 rounded-circle shadow" id="ddAddBtn" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
+                    <div class="dropdown-menu" aria-labelledby="ddHelp" style="transform:translate(-40%, 0);"><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Quote</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Sales order</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Manufacturing order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Purchase order</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Stock adjustment</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> New product card</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            New material card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Customer</a></div>
+                </div>
+                <div class="text-white ms-auto me-2 dropdown flex-shrink-0"><a class="nav-link" id="ddHelp"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><i
+                            class="fa-solid fa-circle-question fa-2x"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddHelp"><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-graduation-cap"></i> Knowledge base</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-star"></i>
+                            What's new</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-code"></i> Developer portal</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-user-group"></i> Partner directory</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-message"></i> Chat with us</a></div>
+                </div>
+                <div class="me-2 flex-shrink-0"><a id="ddDemoBtn" class="btn border-0 shadow-none" aria-current="page"
+                        href="#"><i class="fa-solid fa-trash"></i> Demo Data </a></div>
+                <div class="text-white dropdown flex-shrink-0">
+                    <div class="nav-link d-inline-flex align-items-center" id="ddAccount" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                        <div class="d-flex flex-column align-items-end me-3"><span class="fw-bold">Test
+                                Company</span><span>Test Test</span></div><i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddAccount"><a href="/account"
+                            class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-city"></i>
+                            Account</a><a href="/team" class="dropdown-item ddItem text-secondary py-2"><i
+                                class="fa-solid fa-user-group"></i> Team</a><a href="#"
+                            class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-book-bookmark"></i>
+                            Subscription</a>
+                        <hr class="dropdown-divider"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="p-4">
+        <div class="row">
+            <div class="card col-3" style="background-color: rgb(243, 243, 243);    border: 1px outset;
+            border-right: none;">
+                <div class="mt-4" id="yan_menu">
+                    <ul class="list-group list-group-flush" style="border: none;text-decoration:none;">
+                        <div class="row">
+                            <a href="settings.html" style="text-decoration: none;color: black;">
+                                <li class="list-group-item border-0" id="yan_menu3"> General
+                                    <i class="fa-solid fa-angle-right float-end"></i>
+                                </li>
+                            </a>
+                        </div>
+                        <a href="unit.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0 table-active" id="yan_menu3">Units of measure
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+
+                        </a>
+                        <a href="tax_rates.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0" id="yan_menu3">Tax rates
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+                        </a>
+                        <a href="categories.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0" id="yan_menu3">Categories
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+                        </a>
+                        <a href="operations.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0" id="yan_menu3">Operations
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+                        </a>
+                        <a href="resources.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0" id="yan_menu3">Resources
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+                        </a>
+                        <a href="locations.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0" id="yan_menu2">Locations
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+                        </a>
+                        <a href="print.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0" id="yan_menu3">Print templates
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+                        </a>
+                        <a href="integrations.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0" id="yan_menu3">Integrations
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+                        </a>
+                        <a href="api.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0" id="yan_menu3">Apı
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+                        </a>
+                        <a href="data.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0" id="yan_menu3">Data import
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+                        </a>
+                        <a href="clear.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0" id="yan_menu3">Clear data
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+                        </a>
+                        <a href="shop.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0" id="yan_menu3">Shop floor app
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+                        </a>
+                        <a href="barcodes.html" style="text-decoration: none;">
+                            <li class="list-group-item border-0" id="yan_menu3">Barcodes
+                                <i class="fa-solid fa-angle-right float-end"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-9" style="background: white;border: 1px outset;">
+                <div class="container">
+                    <p id="unit_p2" class="mt-4">Locations</p>
+                    <p>Here you can manage your warehouse locations. Note that adding or removing locations will affect
+                        your subscription plan. <a href="#">Read More</a></p>
+                    <p>Location legal name and address entered here will be used on printed documents</p>
+                </div>
+                <div class="row">
+                    <div class="col-11">
+                        <table class="table table-bordered " style="width: 100%;margin-left: 18px;">
+                            <thead>
+                                <tr>
+                                    <th style=" background: rgba(242, 242, 242,1);" class="col-1"></th>
+                                    <th id="unit_kilo1" style=" line-height: 24px;" class="">Location name <i
+                                            id="locations_i" class="fa-solid fa-circle-info"></i></th>
+                                    <th id="unit_kilo1" style=" line-height: 24px;" class="">Legal name <i
+                                            id="locations_i" class="fa-solid fa-circle-info"></i></th>
+                                    <th id="unit_kilo1" style=" line-height: 24px;" class="">Adress <i id="locations_i"
+                                            class="fa-solid fa-circle-info"></i></th>
+                                    <th id="unit_kilo1" style=" line-height: 24px;" class="">Enabled functions <i
+                                            id="locations_i" class="fa-solid fa-circle-info"></i></th>
+                                    <th style=" background: rgba(242, 242, 242,1);" class="col-1"></th>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: center;"><i id="location_ucnokta"
+                                            class="fa-solid fa-grip-vertical"></i></th>
+                                    <th id="unit_kilo">Main Location</th>
+                                    <th id="unit_kilo"></th>
+                                    <button class="modal-dialog modal-dialog-scrollable" data-bs-toggle="modal"
+                                        data-bs-target="#modal1">
+                                        <th id="location_adres">
+                                            <i id="locations_i" class="fa-solid fa-location-dot"></i>Enter Adres
+                                        </th>
+                                    </button>
+                                    <div class="modal" id="modal1">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5>adresi buraya yazıcaz</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <th id="unit_kilo" class="d-flex justify-content-evenly"><i id="locations_check"
+                                            class="fa-solid fa-check"></i> Sell <i id="locations_check"
+                                            class="fa-solid fa-check"></i> Make <i id="locations_check"
+                                            class="fa-solid fa-check"></i> Buy</th>
+                                    <th id="unit_kilo" style="text-align:center;font-weight: 600 !important;">
+                                        <i class="fa-solid fa-lock"
+                                            style="font-weight: 600;font-size: small;color: rgba(148, 154, 159);"></i>
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <a href="" style="text-decoration:none;font-weight: 600;" class="ps-3">+ Add new row </a>
+                    </div>
+                </div>
+                <div class=" mt-5 ps-3" style="width: 50%;">
+                    <option selected id="location_default">Default tax on Sales order</option>
+                    <select class="form-select" aria-label="Default select example" id="general_select1">
+                        <option value="1">20% - VAT[DEMO]</option>
+                    </select>
+                    <option class="mt-4" selected id="general_option">Default tax on Purchase order</option>
+                    <select class="form-select" aria-label="Default select example" id="general_select1">
+                        <option value="1">20% - VAT[DEMO]</option>
+                    </select>
+                    <option class="mt-4" selected id="general_option">Default tax on Purchase order</option>
+                    <select class="form-select" aria-label="Default select example" id="general_select1">
+                        <option value="1">20% - VAT[DEMO]</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        <script src="bootstrap.min.js"></script>
+</body>
+
+</html>
