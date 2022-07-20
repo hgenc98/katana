@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts Custumer- Katana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="z-index: 99;">
+            <div class="container-fluid justify-content-start"><a href="/"
+                    class="router-link-active router-link-exact-active navbar-brand font-monospace p-2 px-4"
+                    aria-current="page">Katana</a><button class="navbar-toggler me-2" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbar">
+                    <div class="navbar-nav"><a href="/sales"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-shop"></i> SELL </a><a href="/manufacturingorders"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-thumbs-up"></i> MAKE </a><a href="/purchases"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-basket-shopping"></i> BUY </a><a href="/inventory"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-cube"></i> STOCK </a><a href="/products"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-star"></i> ITEMS </a><a href="/contacts"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-user-group"></i> CONTACTS </a><a href="/settings"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-gear"></i> SETTINGS </a></div>
+                </div>
+                <div id="navbarAddBtn" class="dropdown ms-lg-0 ms-sm-auto"><button
+                        class="btn border-0 rounded-circle shadow" id="ddAddBtn" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
+                    <div class="dropdown-menu" aria-labelledby="ddHelp" style="transform:translate(-40%, 0);"><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Quote</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Sales order</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Manufacturing order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Purchase order</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Stock adjustment</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> New product card</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            New material card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Customer</a></div>
+                </div>
+                <div class="text-white ms-auto me-2 dropdown flex-shrink-0"><a class="nav-link" id="ddHelp"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><i
+                            class="fa-solid fa-circle-question fa-2x"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddHelp"><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-graduation-cap"></i> Knowledge base</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-star"></i>
+                            What's new</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-code"></i> Developer portal</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-user-group"></i> Partner directory</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-message"></i> Chat with us</a></div>
+                </div>
+                <div class="me-2 flex-shrink-0"><a id="ddDemoBtn" class="btn border-0 shadow-none" aria-current="page"
+                        href="#"><i class="fa-solid fa-trash"></i> Demo Data </a></div>
+                <div class="text-white dropdown flex-shrink-0">
+                    <div class="nav-link d-inline-flex align-items-center" id="ddAccount" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                        <div class="d-flex flex-column align-items-end me-3"><span class="fw-bold">Test
+                                Company</span><span>Test Test</span></div><i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddAccount"><a href="/account"
+                            class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-city"></i>
+                            Account</a><a href="/team" class="dropdown-item ddItem text-secondary py-2"><i
+                                class="fa-solid fa-user-group"></i> Team</a><a href="#"
+                            class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-book-bookmark"></i>
+                            Subscription</a>
+                        <hr class="dropdown-divider"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="card mb-3 ms-4 mt-4 container-fluid" style="width: 97%;">
+        <div class="card-header bg-transparent">Custumer
+            <div class="row">
+                <div style="text-align: end;"class="row">
+                <h6 class="col-3" style="text-align: start;">Jane Rooms [DEMO] </h6>
+                    <p class="d-flex justify-content-end col-3">All changes saved</p>
+                    <div class="col-2">
+
+                        <svg class="MuiSvgIcon-root " focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                            style="height: 24px; width: 24px; color: rgb(148, 154, 159);">
+                            <path
+                                d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="col-1"> X</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-body ">
+            <form class="g-3">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="validationDefault01" class="form-label" id="customer_first_name">First name</label>
+                        <div class="input col-12">
+                            <input class="input-field " type="text" placeholder="Enter adress" id="customer_first_name1"
+                                value="Jane">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="validationDefault02" class="form-label" id="customer_first_name">Last name</label>
+                        <div class="input col-12">
+                            <input class="input-field " type="text" placeholder="Enter adress" id="customer_first_name1"
+                                value="Rooms">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <label for="inputEmail4" class="form-label" id="customer_first_name">Billing adress</label>
+                        <div class="input col-12" style="width: 26rem;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <input class="input-field " type="text" placeholder="Enter adress"
+                                id="customer_first_name1">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationDefault03" class="form-label pt-5" id="customer_first_name">Company
+                            Name</label>
+                        <div class="input col-12" style="width: 23rem;">
+                            <input class="input-field " type="text" placeholder="" id="customer_first_name1" value="">
+                        </div>
+
+                    </div>
+                    <div class="col-md-8">
+                        <label for="inputEmail4" class="form-label pt-5" id="customer_first_name">Default shipping
+                            adress</label>
+                        <div class="input col-12" style="width: 23rem;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <input class="input-field " type="text" placeholder="Same as biling adress"
+                                id="customer_first_name1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationDefault03" class="form-label pt-5" id="customer_first_name">Display
+                        Name</label>
+                    <div class="input col-12" style="width: 23rem;">
+                        <input class="input-field " type="text" placeholder="" id="customer_first_name1"
+                            value=" Jane rooms [DEMO]">
+                    </div>
+                </div>
+
+
+                <label for="inputEmail4" class="form-label pt-5" id="customer_first_name">Email</label>
+                <div class="input col-4">
+                    <i class="fa fa-envelope icon"></i>
+                    <input class="input-field " type="text" placeholder="jane@rooms.com" id="customer_first_name1"
+                        name="email">
+                </div>
+                <label for="inputEmail4" class="form-label pt-5" id="customer_first_name">Phone</label>
+                <div class="input col-4">
+                    <i class="fa-solid fa-phone"></i>
+                    <input class="input-field " type="text" placeholder="" id="customer_first_name1">
+                </div>
+
+
+
+
+                <div class="col-md-4">
+                    <label for="validationDefault03" class="form-label pt-5" id="customer_first_name">Loyal
+                        Custumer</label>
+                    <div class="input col-12" style="width: 23rem;">
+                        <input class="input-field " type="text" placeholder="Loyal customer" id="customer_first_name1"
+                            value="">
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+        <div class="card-footer bg-transparent border-success">Footer</div>
+    </div>
+
+
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="bootstrap.min.js"></script>
+</body>
+
+</html>

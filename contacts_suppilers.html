@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts Custumer- Katana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="z-index: 99;">
+            <div class="container-fluid justify-content-start"><a href="/"
+                    class="router-link-active router-link-exact-active navbar-brand font-monospace p-2 px-4"
+                    aria-current="page">Katana</a><button class="navbar-toggler me-2" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbar">
+                    <div class="navbar-nav"><a href="/sales"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-shop"></i> SELL </a><a href="/manufacturingorders"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-thumbs-up"></i> MAKE </a><a href="/purchases"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-basket-shopping"></i> BUY </a><a href="/inventory"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-cube"></i> STOCK </a><a href="/products"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-star"></i> ITEMS </a><a href="/contacts"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-user-group"></i> CONTACTS </a><a href="/settings"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                class="fa-solid fa-gear"></i> SETTINGS </a></div>
+                </div>
+                <div id="navbarAddBtn" class="dropdown ms-lg-0 ms-sm-auto"><button
+                        class="btn border-0 rounded-circle shadow" id="ddAddBtn" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
+                    <div class="dropdown-menu" aria-labelledby="ddHelp" style="transform:translate(-40%, 0);"><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Quote</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Sales order</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Manufacturing order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Purchase order</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Stock adjustment</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> New product card</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            New material card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Customer</a></div>
+                </div>
+                <div class="text-white ms-auto me-2 dropdown flex-shrink-0"><a class="nav-link" id="ddHelp"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><i
+                            class="fa-solid fa-circle-question fa-2x"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddHelp"><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-graduation-cap"></i> Knowledge base</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-star"></i>
+                            What's new</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-code"></i> Developer portal</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-user-group"></i> Partner directory</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-message"></i> Chat with us</a></div>
+                </div>
+                <div class="me-2 flex-shrink-0"><a id="ddDemoBtn" class="btn border-0 shadow-none" aria-current="page"
+                        href="#"><i class="fa-solid fa-trash"></i> Demo Data </a></div>
+                <div class="text-white dropdown flex-shrink-0">
+                    <div class="nav-link d-inline-flex align-items-center" id="ddAccount" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                        <div class="d-flex flex-column align-items-end me-3"><span class="fw-bold">Test
+                                Company</span><span>Test Test</span></div><i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddAccount"><a href="/account"
+                            class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-city"></i>
+                            Account</a><a href="/team" class="dropdown-item ddItem text-secondary py-2"><i
+                                class="fa-solid fa-user-group"></i> Team</a><a href="#"
+                            class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-book-bookmark"></i>
+                            Subscription</a>
+                        <hr class="dropdown-divider"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="p-4 ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="btn-group col-1 ps-5" role="group" aria-label="Basic example">
+                    <button type="button" onclick="window.location.href = 'contacts_custumer.html'" class=""
+                        style="border: 1px solid #d5d5d5;text-decoration:none;color: black;">Custumer</button>
+                    <button type="button" onclick="window.location.href = 'contacts_suppilers.html'" class=""
+                        style="background: #003E9B;border:none;text-decoration: none;color:white;">Suppliers</button>
+                </div>
+                <div class="d-flex justify-content-end col">
+                    <button type="" class="" style="color: #3365AF;border: none;">+ New customer</button>
+                </div>
+                <button type="button" class="btn" style="border:none; background: #003E9B;text-align: end;"></button>
+                <table class="table table-bordered table-hover" style="border: 1px solid #d5d5d5;">
+                    <thead>
+                        <tr>
+                            <th scope="row">
+                                <div class="form-check d-flex justify-content-center">
+                                    <input class="form-check-input"
+                                        style="border: 2px solid rgb(127,140,141);border-radius: inherit;"
+                                        type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                    </label>
+                                </div>
+                            </th>
+                            <th style="font-size: 13px;font-weight: 400;color: rgb(141, 142, 144);" scope="col">Name<i
+                                    id="locations_i" class="fa-solid fa-circle-info"></i></th>
+                            <th style="font-size: 13px;font-weight: 400;color: rgb(141, 142, 144);" scope="col">E-mail
+                                Adress<i id="locations_i" class="fa-solid fa-circle-info"></i></th>
+                            <th style="font-size: 13px;font-weight: 400;color: rgb(141, 142, 144);" scope="col">
+                                Comment<i id="locations_i" class="fa-solid fa-circle-info"></i></th>
+                            <th scope="col-1"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <th><input type="text" class="w-100 border-0"></th>
+                            <th><input type="text" class="w-100 border-0"></th>
+                            <th><input type="text" class="w-100 border-0"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white">
+                            <th scope="row">
+                                <div class="form-check d-flex justify-content-center">
+                                    <input class="form-check-input"
+                                        style="border: 2px solid rgb(127,140,141);border-radius: inherit;"
+                                        type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                    </label>
+                                </div>
+                            </th>
+                            <td><input type="text" style="width: 100%;border: none;" value="Paint Suppiler[Demo]"></td>
+                            <td><input type="text" style="width: 100%;border: none;" value=""></td>
+                            <td><input type="text" style="width: 100%;border: none;"
+                                    value="Reliable supplier, always on time"></td>
+                            <td><a href="" style="text-decoration: none;color: black;"> <i
+                                        class="fa-solid fa-trash d-flex justify-content-center"
+                                        style="font-weight: 600;font-size: small;color: rgba(148, 154, 159);"></i></a>
+                            </td>
+
+                        </tr>
+                        <tr style="background: white;">
+                            <th scope="row">
+                                <div class="form-check d-flex justify-content-center">
+                                    <input class="form-check-input"
+                                        style="border: 2px solid rgb(127,140,141);border-radius: inherit;"
+                                        type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                    </label>
+                                </div>
+                            </th>
+                            <td><input type="text" style="width: 100%;border: none;"
+                                    value="Furniture Crafting Products [DEMO]"></td>
+                            <td><input type="text" style="width: 100%;border: none;" value=""></td>
+                            <td><input type="text" style="width: 100%;border: none;"
+                                    value="Send a purchase order on paper"></td>
+                            <td><a href="" style="text-decoration: none;color: black;"> <i
+                                        class="fa-solid fa-trash d-flex justify-content-center"
+                                        style="font-weight: 600;font-size: small;color: rgba(148, 154, 159);"></i></a>
+                            </td>
+                        </tr>
+                        <tr style="background: white;">
+                            <th scope="row">
+                                <div class="form-check d-flex justify-content-center">
+                                    <input class="form-check-input"
+                                        style="border: 2px solid rgb(127,140,141);border-radius: inherit;"
+                                        type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                    </label>
+                                </div>
+                            </th>
+                            <td><input type="text" style="width: 100%;border: none;" value="Wood Supplier [DEMO]"></td>
+                            <td><input type="text" style="width: 100%;border: none;" value=""></td>
+                            <td><input type="text" style="width: 100%;border: none;" value=""></td>
+                            <td><a href="" style="text-decoration: none;color: black;"> <i
+                                        class="fa-solid fa-trash d-flex justify-content-center"
+                                        style="font-weight: 600;font-size: small;color: rgba(148, 154, 159);"></i></a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <a href="#" style="text-decoration: none;"> + Add new row</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="bootstrap.min.js"></script>
+</body>
+
+</html>
