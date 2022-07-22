@@ -231,3 +231,28 @@ body {
   border-radius: 4px;
   text-transform: none;
 }
+#i_p_d_p_r_svg{
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+  color:  #3365AF !important;
+}
+#i_p_d_p_r_button{
+ border: none;
+ background: none;
+ color:  #3365AF;
+ font-weight: 600;
+}
+#i_p_d_p_r_button:hover{
+ border: none;
+ background: rgba(100, 116, 163, 0.068);
+}
+#i_p_d_p_r_i{
+  color: rgb(101, 102, 105);
+  background: rgba(242, 242, 242,1);
+  width: 17px;
+}

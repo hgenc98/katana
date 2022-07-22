@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts Custumer- Katana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-lg" style="z-index: 99;">
+            <div class="container-fluid justify-content-start" style="background-color: #10313A;">
+
+
+
+
+
+                <a href="/"
+                    class="router-link-active text-white router-link-exact-active navbar-brand font-monospace p-2 px-4"
+                    aria-current="page"><img src="logo.PNG" alt="resim bulunamadı" style="width: 100px;"></a><button
+                    class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbar">
+                    <div class="navbar-nav"><a href="/sales"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-shop"></i> SELL </a><a
+                            href="/manufacturingorders" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-thumbs-up"></i> MAKE </a><a
+                            href="/purchases" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-basket-shopping"></i> BUY
+                        </a><a href="/inventory" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-cube"></i> STOCK </a><a
+                            href="/products" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: yellow;"><i class="fa-solid fa-star"></i> ITEMS </a><a href="/contacts"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-user-group"></i> CONTACTS
+                        </a><a href="/settings" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-gear"></i> SETTINGS </a>
+                    </div>
+                </div>
+                <div id="navbarAddBtn" class="dropdown ms-lg-0 ms-sm-auto"><button
+                        class="btn border-0 rounded-circle shadow" id="ddAddBtn" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
+                    <div class="dropdown-menu" aria-labelledby="ddHelp" style="transform:translate(-40%, 0);"><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Quote</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Sales order</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Manufacturing order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Purchase order</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Stock adjustment</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> New product card</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            New material card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Customer</a></div>
+                </div>
+                <div class="text-white ms-auto me-2 dropdown flex-shrink-0"><a class="nav-link" id="ddHelp"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><i
+                            class="fa-solid fa-circle-question fa-2x"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddHelp"><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-graduation-cap"></i> Knowledge base</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-star"></i>
+                            What's new</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-code"></i> Developer portal</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-user-group"></i> Partner directory</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-message"></i> Chat with us</a></div>
+                </div>
+                <div class="me-2 flex-shrink-0"><a id="ddDemoBtn" class="btn border-0 shadow-none" aria-current="page"
+                        href="#"><i class="fa-solid fa-trash"></i> Demo Data </a></div>
+                <div class="text-white dropdown flex-shrink-0">
+                    <div class="nav-link d-inline-flex align-items-center" id="ddAccount" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                        <div class="d-flex flex-column align-items-end me-3"><span class="fw-bold">Test
+                                Company</span><span>Test Test</span></div><i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddAccount"><a href="/account"
+                            class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-city"></i>
+                            Account</a><a href="/team" class="dropdown-item ddItem text-secondary py-2"><i
+                                class="fa-solid fa-user-group"></i> Team</a><a href="#"
+                            class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-book-bookmark"></i>
+                            Subscription</a>
+                        <hr class="dropdown-divider"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="card mx-5 my-4">
+        <div class="card-header bg-transparent">
+            <div class="row">
+                <div class="col-9"><small>Product</small>
+                    <div class="fw-bold">Coffee table [DEMO]</div>
+                </div>
+                <div class="col-3">
+                    <div class="d-flex align-items-center h-100 justify-content-around">
+                        <div class="fw-bold" style="color: rgb(148, 154, 159);font-size:small">All changes saved</div>
+                        <div class="dropdown dropdown-menu-end"><button
+                                class="btn bg-transparent rounded-circle border-0 formBtn" href="#" role="button"
+                                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i style="color: rgb(148, 154, 159);font-size:small"
+                                    class="fa-solid fa-print"></i></button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Choose a print template</a></li>
+                                <li><a class="dropdown-item" href="#" style="color: #7F848A;font-style: italic;">No
+                                        templates here</a></li>
+                                <li><a class="dropdown-item" href="#">Manage print templates</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown-menu-end"><button
+                                class="btn bg-transparent rounded-circle border-0 formBtn" href="#" role="button"
+                                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i style="color: rgb(148, 154, 159);font-size:small"
+                                    class="fa-solid fa-ellipsis-vertical text-muted"></i></button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                <li><a class="dropdown-item" href="#">Duplicate</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn-close formBtn rounded-circle border-0 p-0" style="color: rgb(148, 154, 159);font-size:small" aria-label="Close">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            style="width:auto; height: auto;display: flex;padding: 2px 16px;align-items: center;background-color: #CCD8EB;">
+            <div class="col-1">
+                <button style="background: rgba(255, 255, 255, 0.5);border: none;height: 40px; width: 100px;"><span
+                        style="font-size: small;">General info</span></button>
+            </div>
+            <div class="col-2">
+                <button style="background: rgba(255, 255, 255, 0.5);border: none;height: 40px; width: 200px;"><span
+                        style="font-size: small;">Product recipe / BOM</span></button>
+            </div>
+            <div class="col-">
+                <button style="background: white;border: none;height: 40px; width: 200px;"><span
+                        style="font-size: small;">Production operations</span></button>
+            </div>
+        </div>
+        <div class="card-body ">
+
+            <div class="row">
+                <div class="col-6">
+                    <strong>Operation steps</strong>
+                </div>
+                <div class="col-6 text-end">
+                    <button id="i_p_d_p_r_button">
+                        <svg style="color:  #3365AF;" focusable="false" viewBox="0 0 24 24" id="i_p_d_p_r_svg"
+                            aria-hidden="true">
+                            <path d="M4 10h12v2H4zm0-4h12v2H4zm0 8h8v2H4zm10 0v6l5-3z"></path>
+                        </svg> Copy operations from
+                    </button>
+
+                </div>
+
+
+            </div>
+            <div class="mt-2">
+                <table class="table table-bordered table-hover"
+                    style="border: 1px solid #d5d5d5;background: rgb(242, 242, 242);">
+                    <thead>
+                        <tr>
+                            <div class="row">
+                                <th scope="col-2"></th>
+                                <th style="font-size: 13px;font-weight: 400;color: rgb(141, 142, 144);" scope="col">
+                                    Operation<i id="locations_i" class="fa-solid fa-circle-info"></i></th>
+                                <th style="font-size: 13px;font-weight: 400;color: rgb(141, 142, 144);" scope="col">
+                                    Resource<i id="locations_i" class="fa-solid fa-circle-info"></i></th>
+                                <th style="font-size: 13px;font-weight: 400;color: rgb(141, 142, 144);" scope="col">
+                                    Cost per hour<i id="locations_i" class="fa-solid fa-circle-info"></i></th>
+                                <th style="font-size: 13px;font-weight: 400;color: rgb(141, 142, 144);" scope="col">
+                                    Time<i id="locations_i" class="fa-solid fa-circle-info"></i></th>
+                                <th style="font-size: 13px;font-weight: 400;color: rgb(141, 142, 144);" scope="col">
+                                    Product:Color</th>
+                                <th style="font-size: 13px;font-weight: 400;color: rgb(141, 142, 144);" scope="col">
+                                    Cost<i id="locations_i" class="fa-solid fa-circle-info"></i></th>
+                            </div>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white p-0">
+                            <th scope="row" class="p-0 pt-2 pe-2 ps-2">
+                                <i class="fa-solid fa-grip-vertical"></i>
+                            </th>
+                            <td class="p-0 pt-2 pe-2">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <input type="text" style="outline: none;" class="w-100 border-0 col-5"
+                                            value="Cutting [DEMO]">
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="p-0 pt-2 pe-2">
+                                <input type="text" style="outline: none;" class="w-100 border-0 col-5"
+                                    value="Table Saw [DEMO]">
+                            </td>
+                            <td class="p-0 pt-2 pe-2">
+                                <input type="text" style="outline: none;" class="w-100 border-0 col-5 text-end"
+                                    value="10 USD">
+                            </td>
+                            <td class="p-0 pt-2 pe-2">
+                                <input type="text" style="outline: none;" class="w-100 border-0 col-5 text-end"
+                                    value="1 h 30 m">
+                            </td>
+                            <td class="p-0" style="height: 40px;text-align: center;">
+                                <div class="dropdown-center">
+                                    <button class="btn w-100 text-start" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Product All
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="form-check pt-3 " style="outline: none;">
+                                                <div class="ps-3">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                        -All-
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check pt-3">
+                                                <div class="ps-3">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                        Brown
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        
+                            <th class="p-0 pt-2 pe-2"
+                                style="font-weight: 400;color: rgb(141, 142, 144);text-align: end;" scope="col">
+                                175 USD
+                                <a href="#">
+                                    <svg id="i_p_d_p_r_i" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </th>
+
+                            <th class="p-0 ps-3 pt-2 pe-2" style="font-size: small;color: rgb(141, 142, 144);">
+                                <i class="fa-solid fa-trash"></i>
+                            </th>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+                <div>
+                    <button style="border: none;background: none;">
+                        <a href="" style="text-decoration: none;font-weight: 600;">
+                            + Add new row
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+
+            <script type="module" src="/src/main.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                crossorigin="anonymous"></script>
+            <script src="bootstrap.min.js"></script>
+            <script src="//cdn.ckeditor.com/4.19.1/basic/ckeditor.js"></script>
+
+            <script>
+                CKEDITOR.replace('editor1')
+            </script>
+</body>
+
+</html>
