@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="22px" viewBox="0 0 32 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico_katana_star_badge</title>
+    <defs>
+        <polygon id="path-1" points="6.5 9.9255 10.517 12.35 9.451 7.7805 13 4.706 8.3265 4.3095 6.5 0 4.6735 4.3095 0 4.706 3.549 7.7805 2.483 12.35"></polygon>
+    </defs>
+    <g id="ico_katana_star_badge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="bounds" x="0" y="0" width="32" height="22"></rect>
+        <path d="M5,2 L23.5197034,2 C24.4448885,2 25.3183198,2.42688001 25.8867348,3.15686065 L30.5635631,9.16302578 C31.4080952,10.2476068 31.4074604,11.7674063 30.5620225,12.8512814 L25.8867463,18.8451162 C25.318263,19.5739278 24.4455606,20 23.5212556,20 L5,20 C3.34314575,20 2,18.6568542 2,17 L2,5 C2,3.34314575 3.34314575,2 5,2 Z" id="Mask" fill="#092332"></path>
+        <g id="icon/social/star" transform="translate(6.500000, 4.500000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Path" fill-opacity="0" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <g id="Group" mask="url(#mask-2)">
+                <g transform="translate(-1.300000, -1.300000)" id="↳-Color">
+                    <rect id="Rectangle" fill="#EEFF38" x="0" y="0" width="15.756" height="15.756"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

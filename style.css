@@ -215,3 +215,19 @@ body {
   font-size: small;
   width: 95%;
 }
+#item_product_variants_button{
+  background: rgb(224,224,224);
+  height: 40px;
+  width: auto;
+  border:outset;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: Open Sans, sans-serif;
+  font-weight: 600;
+  line-height: 1.75;
+  border-radius: 4px;
+  text-transform: none;
+}
