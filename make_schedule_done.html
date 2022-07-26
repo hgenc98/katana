@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts Custumer- Katana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-lg" style="z-index: 99;">
+            <div class="container-fluid justify-content-start" style="background-color: #10313A;">
+
+
+
+
+
+                <a href="/"
+                    class="router-link-active text-white router-link-exact-active navbar-brand font-monospace p-2 px-4"
+                    aria-current="page"><img src="logo.PNG" alt="resim bulunamadı" style="width: 100px;"></a><button
+                    class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbar">
+                    <div class="navbar-nav"><a href="/sales"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-shop"></i> SELL </a><a
+                            href="/manufacturingorders" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: yellow;"><i class="fa-solid fa-thumbs-up"></i> MAKE </a><a href="/purchases"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-basket-shopping"></i> BUY
+                        </a><a href="/inventory" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color:rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-cube"></i> STOCK </a><a
+                            href="/products" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-star"></i> ITEMS </a><a
+                            href="/contacts" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-user-group"></i> CONTACTS
+                        </a><a href="/settings" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-gear"></i> SETTINGS </a>
+                    </div>
+                </div>
+                <div id="navbarAddBtn" class="dropdown ms-lg-0 ms-sm-auto"><button
+                        class="btn border-0 rounded-circle shadow" id="ddAddBtn" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
+                    <div class="dropdown-menu" aria-labelledby="ddHelp" style="transform:translate(-40%, 0);"><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Quote</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Sales order</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Manufacturing order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Purchase order</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Stock adjustment</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> New product card</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            New material card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Customer</a></div>
+                </div>
+                <div class="text-white ms-auto me-2 dropdown flex-shrink-0"><a class="nav-link" id="ddHelp"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><i
+                            class="fa-solid fa-circle-question fa-2x"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddHelp"><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-graduation-cap"></i> Knowledge base</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-star"></i>
+                            What's new</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-code"></i> Developer portal</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-user-group"></i> Partner directory</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-message"></i> Chat with us</a></div>
+                </div>
+                <div class="me-2 flex-shrink-0"><a id="ddDemoBtn" class="btn border-0 shadow-none" aria-current="page"
+                        href="#"><i class="fa-solid fa-trash"></i> Demo Data </a></div>
+                <div class="text-white dropdown flex-shrink-0">
+                    <div class="nav-link d-inline-flex align-items-center" id="ddAccount" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                        <div class="d-flex flex-column align-items-end me-3"><span class="fw-bold">Test
+                                Company</span><span>Test Test</span></div><i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddAccount"><a href="/account"
+                            class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-city"></i>
+                            Account</a><a href="/team" class="dropdown-item ddItem text-secondary py-2"><i
+                                class="fa-solid fa-user-group"></i> Team</a><a href="#"
+                            class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-book-bookmark"></i>
+                            Subscription</a>
+                        <hr class="dropdown-divider"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="col-12 pe-5 ps-5">
+        <div class="ps-5">
+            <ul class="nav" style=" display: flex;
+            height: 33px;
+            background-color: rgb(242, 242, 242);
+            position: relative;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.055)">
+                <li class="nav-item">
+                    <a class="nav-link active p-1" aria-current="page" href="#"
+                        style="border-bottom: 2px solid #00327C;;font-weight: 600;">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-weight: 600;">Tasks</a>
+                </li>
+            </ul>
+        </div>
+        <div class=" row" style="border-bottom: 6px solid #003E9B">
+            <div class="col-4 align-self-end">
+
+                <ul class="nav" style=" display: flex;height: 33px;">
+
+                    <button class=" " aria-current="page" href="#"
+                        style="font-weight: 600;border-radius: 0px;background: #F2F2F2;color:#9c9c9c;width: 80px;border:1px solid #dedede;font-size: small;">Open</button>
+                    <button class=" " aria-current="page" href="#"
+                        style="font-weight: 600;border-radius: 0px;background-color: #003E9B;color:white;width: 80px;border:1px solid  #dedede ;font-size: small;">Done</button>
+                </ul>
+            </div>
+            <div class="col-8 d-flex justify-content-end">
+
+                <div class="col-2 pt-3" id="buy_order_shipping" style="text-align: end;">
+                    <p>Done at:</p>
+                </div>
+                <div class="dropdown col-2 ps-2 pt-2 ">
+                    <button class="btn dropdown-toggle" style="background:white; font-size: small;font-weight: 500;"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         <i class="fa-solid fa-calendar-day pe-2"></i> Last 7 days
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Last 7 days</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Current month</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Last months</a></li>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Custom date range</a></li>
+                    </ul>
+                </div>
+               
+
+                <div class="dropdown col-2 ps-2 pt-2">
+                    <button class="btn dropdown-toggle" style="background:white; font-size: small;font-weight: 500;"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-location-dot pe-2"></i> Main Locations
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" style="background: rgba(235, 235, 235);" href="#">Main Location</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Manage locations</a></li>
+                    </ul>
+                </div>
+                <div class="col-2 pt-2 text-end">
+                    <button style="border: none;" disabled>
+                        <svg id="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M19 12v7H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2z">
+                            </path>
+                        </svg> Export <i id="stock_adjustments_export_i" class="fa-solid fa-circle-info"></i></button>
+                </div>
+
+            </div>
+        </div>
+    <div class="col-12 pe-5 ps-5">
+
+       
+        <div style="padding-top: 150px;text-align: center;">
+            <svg id="empty-stock-adjustments" width="120px" height="90px" viewBox="0 0 120 90">
+                <g id="Swoosh" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect id="bounds" x="0" y="0" width="120" height="90"></rect>
+                    <path
+                        d="M118,1 C100.962095,15.9811378 49.2202867,28.5912358 49.3489652,9.14173639 C49.4484325,-5.8958155 103.305387,5.31634175 101.17265,43.0143504 C99.3394883,75.4095416 47.1011963,97.2983356 29.7085461,72.8712543 C20.3197079,59.6853881 30.7128672,53.4412227 37.2506828,65.6670841 C43.7884984,77.8928922 28.8784259,98.7432232 6,81.3555021"
+                        id="Path" stroke="#C9D7D4" stroke-width="2.5"></path>
+                </g>
+            </svg>
+            <h5 id="stock_adjustments_no_stock" class="pt-4">No orders to show</h5>
+                       <p id="stock_adjustments_no_stock1">Try changing the filter criteria</p>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.19.1/basic/ckeditor.js"></script>
+
+    <script>
+        CKEDITOR.replace('editor1')
+    </script>
+
+</body>
+
+</html>
