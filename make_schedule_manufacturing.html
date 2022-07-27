@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts Custumer- Katana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-lg" style="z-index: 99;">
+            <div class="container-fluid justify-content-start" style="background-color: #10313A;">
+
+
+
+
+
+                <a href="/"
+                    class="router-link-active text-white router-link-exact-active navbar-brand font-monospace p-2 px-4"
+                    aria-current="page"><img src="logo.PNG" alt="resim bulunamadı" style="width: 100px;"></a><button
+                    class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbar">
+                    <div class="navbar-nav"><a href="/sales"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-shop"></i> SELL </a><a
+                            href="/manufacturingorders" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: yellow;"><i class="fa-solid fa-thumbs-up"></i> MAKE </a><a href="/purchases"
+                            class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-basket-shopping"></i> BUY
+                        </a><a href="/inventory" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-cube"></i> STOCK </a><a
+                            href="/products" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-star"></i> ITEMS </a><a
+                            href="/contacts" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-user-group"></i> CONTACTS
+                        </a><a href="/settings" class="nav-link d-flex flex-column align-items-center p-2 px-4"
+                            style="color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-gear"></i> SETTINGS </a>
+                    </div>
+                </div>
+                <div id="navbarAddBtn" class="dropdown ms-lg-0 ms-sm-auto"><button
+                        class="btn border-0 rounded-circle shadow" id="ddAddBtn" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
+                    <div class="dropdown-menu" aria-labelledby="ddHelp" style="transform:translate(-40%, 0);"><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Quote</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Sales order</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Manufacturing order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Purchase order</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            Stock adjustment</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> New product card</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                            New material card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-plus"></i> Customer</a></div>
+                </div>
+                <div class="text-white ms-auto me-2 dropdown flex-shrink-0"><a class="nav-link" id="ddHelp"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><i
+                            class="fa-solid fa-circle-question fa-2x"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddHelp"><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-graduation-cap"></i> Knowledge base</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-star"></i>
+                            What's new</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-code"></i> Developer portal</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-user-group"></i> Partner directory</a><a
+                            class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-message"></i> Chat with us</a></div>
+                </div>
+                <div class="me-2 flex-shrink-0"><a id="ddDemoBtn" class="btn border-0 shadow-none" aria-current="page"
+                        href="#"><i class="fa-solid fa-trash"></i> Demo Data </a></div>
+                <div class="text-white dropdown flex-shrink-0">
+                    <div class="nav-link d-inline-flex align-items-center" id="ddAccount" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                        <div class="d-flex flex-column align-items-end me-3"><span class="fw-bold">Test
+                                Company</span><span>Test Test</span></div><i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddAccount"><a href="/account"
+                            class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-city"></i>
+                            Account</a><a href="/team" class="dropdown-item ddItem text-secondary py-2"><i
+                                class="fa-solid fa-user-group"></i> Team</a><a href="#"
+                            class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-book-bookmark"></i>
+                            Subscription</a>
+                        <hr class="dropdown-divider"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="card mx-5 my-4">
+        <div class="card-header bg-transparent">
+            <div class="row">
+                <div class="col-6"><small>Manufacturing order</small>
+                    <div class="fw-bold">SO-3 [DEMO] / 1 [CT-BL] Coffee table [DEMO] / black]</div>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                    <div class="dropdown pe-3 pt-1">
+                        <button class="btn dropdown-toggle"
+                            style="background-color: rgb(213, 213, 213);border-radius: 0px;font-weight:600 ;"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Not started
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li style="background: rgb(235,235,235)"><a class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-square-full pe-3" style="color: rgb(213, 213, 213);"></i>
+                                    Not started</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-square-full pe-3"
+                                        style="color: rgb(228, 44, 0);"></i> Blocked</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-square-full pe-3"
+                                        style="color: rgb(255, 223, 108);"></i> Work In
+                                    progress</a></li>
+
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-square-full pe-3"
+                                        style="color: rgb(52, 133, 88);"></i>Done</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fw-bold text-secondary pe-3 pt-2" style="font-size: 12px; color: rgb(148, 154, 159);">
+                        All changes saved</div>
+                    <div class="dropdown dropdown-menu-end pe-3"><button style="color: rgb(148, 154, 159);"
+                            class="btn bg-transparent rounded-circle border-0 formBtn" href="#" role="button"
+                            id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-solid fa-print"></i></button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Choose a print template</a></li>
+                            <li><a class="dropdown-item" href="#">No templates here</a></li>
+                            <li><a class="dropdown-item" href="#">Manage print templates</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown dropdown-menu-end pe-3"><button style="color: rgb(148, 154, 159);"
+                            class="btn bg-transparent rounded-circle border-0 formBtn" href="#" role="button"
+                            id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-solid fa-ellipsis-vertical text-muted"></i></button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                            <li><a class="dropdown-item" href="#">Duplicate</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn-close formBtn rounded-circle border-0 pt-3"
+                        style="color: rgb(0, 0, 0 .25);" aria-label="Close">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <form class="g-3">
+                <div class="row">
+                    <div class="col-3 mt-3">
+                        <label for="validationDefault01" class="form-label" id="customer_first_name">Manufacturing order
+                            #</label>
+                        <div class="input col-12">
+                            <a href="#" style="font-size: small;"> SO-3 [DEMO]</a> / 1
+                        </div>
+                    </div>
+                    <div class="col-3 mt-3">
+                        <label for="validationDefault01" class="form-label" id="customer_first_name">Customer</label>
+                        <div class="input col-12">
+                            <a href="#" style="font-size: small;">Jack Carpets [DEMO]</a> / 1
+                        </div>
+                    </div>
+                    <div class="col-3 mt-3">
+                        <label for="validationDefault01" class="form-label" id="customer_first_name">production deadline
+                        </label>
+                        <div class="input col-12">
+                            <input class="input-field " type="date" placeholder="Enter adress" disabled
+                                id="make_schedule_manufacturing" value="2022-07-27" style="color:rgb(141, 142, 144)">
+                        </div>
+                    </div>
+                    <div class="col-3 mt-3">
+                        <label for="validationDefault01" class="form-label" id="customer_first_name">Created
+                            date</label>
+                        <div class="input col-12">
+                            <input class="input-field " type="date" placeholder="Enter adress"
+                                id="customer_first_name1">
+                        </div>
+                    </div>
+                    <div class="col-6 mt-3 ">
+                        <label for="validationDefault01" class="form-label" id="customer_first_name">Product</label>
+                        <div class="input col-12">
+                            <p style="color: rgb(33, 33, 33 .1); font-size: 15px;">[CT-BL] Coffee table [DEMO] / black
+                                <a href="#" style="color: #003E9B !important;"><svg id="MuiSvgIcon-root"
+                                        class="MuiSvgIcon-root MuiSvgIcon-colorPrimary" focusable="false"
+                                        viewBox="0 0 24 24" aria-hidden="true" style="font-size: 16px;">
+                                        <path
+                                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z">
+                                        </path>
+                                    </svg></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3 mt-3">
+                        <label for="validationDefault01" class="form-label" id="customer_first_name">Delivery
+                            deadline</label>
+                        <div class="input col-12">
+                            <input class="input-field " type="date" placeholder="Enter adress" disabled
+                                id="make_schedule_manufacturing" style="color: red;" value="2022-07-22">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 mt-5">
+                        <label for="validationDefault01" class="form-label" id="customer_first_name">Planned
+                            Quantity</label>
+                        <p>1 pcs</p>
+                    </div>
+                    <div class="col-2 mt-5">
+                        <label for="validationDefault01" class="form-label" id="customer_first_name">Total Cost</label>
+                        <p>281.65 USD</p>
+                    </div>
+                    <div class="mt-5">
+                        <h5>Ingredients</h5>
+
+                        <table class="table table-bordered table-hover" style="border: 1px solid #d5d5d5;">
+                            <thead>
+                                <tr>
+                                    <div class="row">
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            style="width:3%">
+                                        </th>
+                                        <th
+                                            style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;">
+                                        </th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                            item <i class="fa-solid fa-circle-info"></i></th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                            Notes <i class="fa-solid fa-circle-info"></i></th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                            Planned/actual qty <i class="fa-solid fa-circle-info"></i></th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                            Cost <i class="fa-solid fa-circle-info"></i></th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                            Availability <i class="fa-solid fa-circle-info"></i></th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                        </th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                        </th>
+
+                                    </div>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                        scope="col"></th>
+                                    <th colspan="8" style="font-size: small;">
+                                        <div class="row">
+                                            <div class="col-5 ps-5">
+                                                Total:
+                                            </div>
+                                            <div class="col-7 text-center">
+                                                184.15 USD
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr style="font-size: small; color: #696a6d;">
+                                    <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;width: 3%;"
+                                        scope="col">1.</th>
+                                    <th style="width: 3%;color: rgb(141, 142, 144);"><i
+                                            class="fa-solid fa-grip-vertical" style="font-weight: 600;"></i></th>
+                                    <th> <input type="text" value="[W] Wood [Demo]"
+                                            style="width: 100%;border:none;outline: none;height: auto;"></th>
+                                    <th></th>
+                                    <th>5 / ... m </th>
+                                    <th>175 USD</th>
+                                    <th
+                                        style="background-color: rgb(52, 133, 88);color: rgb(255, 255, 255);opacity: 1;line-height: 44px;text-align: center;width: 12%;font-size: small;">
+
+                                        <button type="button"
+                                            style="border: none;background: none;width: 100%;color: white;"
+                                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                            In Stock <i class="fa-solid fa-circle-exclamation text-end ps-5"></i>
+                    </div>
+                    </button>
+                    <div class="modal fade modal-xl" id="staticBackdrop" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="">
+
+                                    <div style="color: black;text-align: start;"><small class="ps-4">Manufacturing
+                                            order</small> <button type="button" class="btn-close" style="text-align: end;"
+                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <div class="fw-bold ps-4">[W] Wood [Demo]
+                                            <a href="#">
+                                                <svg class="text-primary" focusable="false" viewBox="0 0 24 24"
+                                                    aria-hidden="true"
+                                                    style="width: 1em; height: 1em; display: inline-block; font-size: 1.5rem;transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; flex-shrink: 0; user-select: none;">
+                                                    <path
+                                                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                           
+                                        </div>
+                                        <div class="row m-0" style="background: #CCD8EB;; height: 70px;">
+                                            <div class="col-2 col-sm-2 ps-5">
+                                                <button
+                                                    style="width: 100%;line-height: 100%;border: none; background: white; border-radius: 10%;"
+                                                    class="pt-2 text-start ps-3">In stock <p><strong>540</strong> m </p>
+                                                </button>
+                                            </div>
+                                            <div class="col-2 col-sm-2">
+                                                <button
+                                                    style="width: 100%;line-height: 100%;border: none; background-color: rgba(255, 255, 255, 0.3); border-radius: 10%;"
+                                                    class="pt-2 text-start ps-3">Expected <p><strong>0</strong> m </p>
+                                                </button>
+                                            </div>
+                                            <div class="col-2 col-sm-2">
+                                                <button
+                                                    style="width: 100%;line-height: 100%;border: none; background-color: rgba(255, 255, 255, 0.3); border-radius: 10%;"
+                                                    class="pt-2 text-start ps-3">Commited <p><strong>183</strong> m </p>
+                                                </button>
+                                            </div>
+                                            <div class="col-2 col-sm-2">
+                                                <button
+                                                    style="width: 100%;line-height: 100%;border: none; background-color: rgba(255, 255, 255, 0.0); border-radius: 10%;"
+                                                    class="pt-2 text-start ps-3">Reorder point <p><strong>100</strong> m
+                                                    </p></button>
+                                            </div>
+                                            <div class="col-2 col-sm-2">
+                                                <button
+                                                    style="width: 100%;line-height: 100%;border: none; background-color: rgba(255, 255, 255, 0.0); border-radius: 10%;"
+                                                    class="pt-2 text-start ps-3">Missing / Excess <p>
+                                                        <strong>257</strong> m
+                                                    </p></button>
+                                            </div>
+                                            <div class="col-2 col-sm-2 mt-2" style="text-align: end;color: blue;">
+                                                <button
+                                                    style="text-decoration: none; background: white;border: none;border-radius: 10%;">
+                                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24"
+                                                        aria-hidden="true"
+                                                        style="width: 18px; height: 18px; margin-right: 8px;color: #0d6efd !important;">
+                                                        <path
+                                                            d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z">
+                                                        </path>
+                                                    </svg> Buy </button>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                                <div class="modal-body">
+                                    <div class="bg-transparent">
+                                        <table class="table table-bordered table-hover"
+                                            style="border: 1px solid #d5d5d5;">
+                                            <thead>
+                                                <tr>
+                                                    <div class="row">
+                                                        <th class="p-0" style="font-size: small;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                                            style="width:3%">Movement date
+                                                        </th>
+                                                        <th class="p-0"
+                                                            style="font-size: small;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;">
+                                                            Caused by
+                                                        </th>
+                                                        <th class="p-0" style="font-size: small;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                                            scope="col">
+                                                            Quantity change <i class="fa-solid fa-circle-info"></i></th>
+                                                        <th class="p-0" style="font-size: small;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                                            scope="col">
+                                                            Cost/price per unit <i class="fa-solid fa-circle-info"></i>
+                                                        </th>
+                                                        <th  class="p-0" style="font-size: small;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                                            scope="col">
+                                                            Balance after <i class="fa-solid fa-circle-info"></i>
+                                                        </th>
+                                                        <th  class="p-0"style="font-size: small;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                                            scope="col">
+                                                            Value in stock after <i class="fa-solid fa-circle-info"></i>
+                                                        </th>
+                                                        <th class="p-0" style="font-size: small;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                                            scope="col">
+                                                            Avarage cost after <i class="fa-solid fa-circle-info"></i>
+                                                        </th>
+
+                                                    </div>
+                                                </tr>
+
+                                            </thead>
+                                            <tbody>
+                                                <tr style="font-size: small; color: #696a6d;">
+
+                                                    <th class="p-0" style="width: 12%;background-color: rgb(213, 213, 213);font-size: small; ">
+                                                        <div class="dropdown"
+                                                            style="outline:none;background-color: rgb(213, 213, 213);text-align: center;">
+                                                            <button
+                                                                style="outline: none; font-size:small;color: rgba(0, 0, 0, 0.54);background-color: rgb(213, 213, 213); border: none;"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                All dates
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        All dates</a></li>
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        Last 7 days</a></li>
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        Current month</a></li>
+                                                                <li><a class="dropdown-item" href="#">Last month</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        Custom date range</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </th>
+                                                    <th class="p-0"><input type="text"></th>
+                                                    <th class="p-0"><input type="text"></th>
+                                                    <th class="p-0"><input type="text"></th>
+                                                    <th class="p-0"><input type="text"></th>
+                                                    <th class="p-0"><input type="text"></th>
+                                                    <th class="p-0"><input type="text"></th>
+                                                </tr>
+                                                <tr style="font-size: small;text-align: end;" class="p-0">
+                                                    <th style="text-align: start;"><p>2022-07-19</p></th>
+                                                    <th style="text-align: start;"><a href="#" style="text-decoration: none">MO-8 [DEMO]</a></th>
+                                                    <th><p>-30 m</p></th>
+                                                    <th><p>35 USD</p></th>
+                                                    <th><p>540 m</p></th>
+                                                    <th><p>18900 USD</p></th>
+                                                    <th><p>35 USD</p></th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="col-2 pt-2 ps-3 text-start">
+                                        <button style="border: none;" >
+                                            <svg id="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path
+                                                    d="M19 12v7H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2z">
+                                                </path>
+                                            </svg> Export <i id="stock_adjustments_export_i" class="fa-solid fa-circle-info"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <th style="width: 7%;text-align: center;">
+                            <a href="#" style="text-decoration: none;">
+                                <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                                    style="width: 18px; height: 18px; margin-right: 8px;color: #0d6efd !important;">
+                                    <path
+                                        d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z">
+                                    </path>
+                                </svg> Buy </a>
+                        </th>
+                        <th style="width: 3%;"><i class="fa-solid fa-trash"></i></th>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <div>
+                            <a href="#" style="text-decoration: none;font-weight: 600;">+ Add new row</a>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <h5>Operations</h5>
+
+                        <table class="table table-bordered table-hover" style="border: 1px solid #d5d5d5;">
+                            <thead>
+                                <tr>
+                                    <div class="row">
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            style="width:3%">
+                                        </th>
+                                        <th
+                                            style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;">
+                                        </th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                            Operation step <i class="fa-solid fa-circle-info"></i></th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                            Resource <i class="fa-solid fa-circle-info"></i></th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                            Planned/actual time <i class="fa-solid fa-circle-info"></i></th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                            Cost <i class="fa-solid fa-circle-info"></i></th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                            Status <i class="fa-solid fa-circle-info"></i></th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                        </th>
+                                        <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                            scope="col">
+                                        </th>
+
+                                    </div>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;"
+                                        scope="col"></th>
+                                    <th colspan="8" style="font-size: small;">
+                                        <div class="row">
+                                            <div class="col-5 ps-5">
+                                                Total:
+                                            </div>
+                                            <div class="col-3 text-end">
+                                                9 h / ...
+                                            </div>
+                                            <div class="col-3 text-start">
+                                                97.5 USD
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr style="font-size: small; color: #696a6d;">
+                                    <th style="font-size: 13px;font-weight: 400;background: rgb(242, 242, 242);color:#aaa;width: 3%;"
+                                        scope="col">1.</th>
+                                    <th style="width: 3%;color: rgb(141, 142, 144);"><i
+                                            class="fa-solid fa-grip-vertical" style="font-weight: 600;"></i></th>
+                                    <th>Cutting [Demo]</th>
+                                    <th>Table Saw [Demo]</th>
+                                    <th style="text-align: end;">1 h 30 m / ...</th>
+                                    <th>15 USD</th>
+                                    <th style="width: 12%;background-color: rgb(213, 213, 213); ">
+                                        <div class="dropdown"
+                                            style="outline:none;background-color: rgb(213, 213, 213);text-align: center;">
+                                            <button
+                                                style="outline: none; font-size:small;color: rgba(0, 0, 0, 0.54);background-color: rgb(213, 213, 213); border: none;"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24"
+                                                    aria-hidden="true" style="position: relative; margin: auto; width: 1em;
+                                                                    height: 1em;
+                                                                    display: inline-block;
+                                                                    font-size: 1.5rem;
+                                                                    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                                                                    flex-shrink: 0;
+                                                                    user-select: none;
+                                                                    text-align: center;">
+                                                    <path
+                                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">
+                                                        <i class="fa-solid fa-square-full pe-3"
+                                                            style="color: rgb(213, 213, 213);"></i>
+                                                        Not started</a></li>
+                                                <li><a class="dropdown-item" href="#"><i
+                                                            class="fa-solid fa-square-full pe-3"
+                                                            style="color: rgb(255, 223, 108);"></i> In
+                                                        progress</a></li>
+                                                <li><a class="dropdown-item" href="#"><i
+                                                            class="fa-solid fa-square-full pe-3"
+                                                            style="color: rgb(234, 112, 50);"></i>
+                                                        Paused</a></li>
+                                                <li><a class="dropdown-item" href="#"><i
+                                                            class="fa-solid fa-square-full pe-3"
+                                                            style="color: rgb(52, 133, 88);"></i>Completed</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"><i
+                                                            class="fa-solid fa-square-full pe-3"
+                                                            style="color: rgb(228, 44, 0);"></i> Blocked</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </th>
+                                    <th style="width: 7%;text-align: center;">
+                                        <a href="#" style="text-decoration: none;">
+                                            <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24"
+                                                aria-hidden="true"
+                                                style="width: 18px; height: 18px; margin-right: 8px;color: #0d6efd !important;">
+                                                <path
+                                                    d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z">
+                                                </path>
+                                            </svg> Buy </a>
+                                    </th>
+                                    <th style="width: 3%;"><i class="fa-solid fa-trash"></i></th>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="mb-5">
+                            <a href="#" style="text-decoration: none;font-weight: 600;">+ Add new row</a>
+                        </div>
+                    </div>
+
+                    <div> <textarea id="editor1" class="ck_editor" style="width: 100%;height:40px"
+                            placeholder="Tyoe commet here"></textarea>
+                        </textarea>
+                    </div>
+                </div>
+        </div>
+        </form>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.19.1/basic/ckeditor.js"></script>
+
+    <script>
+        CKEDITOR.replace('editor1')
+    </script>
+</body>
+
+</html>
