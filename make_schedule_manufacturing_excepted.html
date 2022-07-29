@@ -421,8 +421,8 @@
         </div>
     </div>
 
-    <div class="modal fade modal-xl" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel"
-        aria-hidden="true">
+    <div class="modal fade modal-xl" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header border-bottom-0">
@@ -472,24 +472,21 @@
                                 </li>
                                 <li class="nav-item ps-2 pt-3 text-end " style="margin-left: 37%;">
                                     <div style="text-align: end;color: blue;">
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal2"
-                                            style="text-decoration: none; background: white;color: black;border: none;border-radius: 10%;">
+                                        <button
+                                            style="text-decoration: none; background: white;border: none;border-radius: 10%;">
                                             <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24"
                                                 aria-hidden="true"
                                                 style="width: 18px; height: 18px; margin-right: 8px;color: #0d6efd !important;">
                                                 <path
                                                     d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z">
                                                 </path>
-                                            </svg>
-                                            Buy
-                                        </button>
+                                            </svg> Buy </button>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-
+                   
                     <div class="modal-body">
                         <table class="table table-bordered table-hover"
                             style="border: 1px solid #d5d5d5; font-size: small;">
@@ -592,63 +589,17 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade modal-lg" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title" id="exampleModalLabel">New purchase order</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    material <br> [W] Wood [DEMO]
-                </div>
-                <div class="row modal-body" style="font-size: small;">
-                    <div class="col-6">Quantity <br>
-                        <input type="text" class="w-100" style="border: none;outline: none;border-bottom: 2px solid gray;">
-                    </div>
-                    <div class="col-6">Excess in stock <br> 257 m </div>
-                </div>
-                <div class="modal-body w-100">
-                    Supplier <br> 
-                    <input type="text" class="w-100 text-secondary" style="border: none;outline: none;border-bottom: 2px solid gray;" value="Select or create supplier">
-                </div>
-                <div class="modal-body">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                          Add other missing items from the same supplier to the purchase order.
-                        </label>
-                      </div>
-                </div>
-                <div class="row modal-body" style="font-size: small;">
-                    <div class="col-6">Purchase order # <br>
-                        <input type="text" class="w-100" style="border: none;outline: none;border-bottom: 2px solid gray;" value="PO-1">
-                    </div>
-                    <div class="col-6">Purchase order # <br>
-                        <input type="date" class="w-100" style="border: none;outline: none;border-bottom: 2px solid gray;">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn text-primary shadow-none border-0" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Create and open order</button>
-                    <button type="button" class="btn btn-primary">Create and close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+        <script type="module" src="/src/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+        <script src="bootstrap.min.js"></script>
+        <script src="//cdn.ckeditor.com/4.19.1/basic/ckeditor.js"></script>
 
-    <script type="module" src="/src/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
-    <script src="bootstrap.min.js"></script>
-    <script src="//cdn.ckeditor.com/4.19.1/basic/ckeditor.js"></script>
-
-    <script>
-        CKEDITOR.replace('editor1')
-    </script>
+        <script>
+            CKEDITOR.replace('editor1')
+        </script>
 </body>
 
 </html>
